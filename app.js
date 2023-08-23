@@ -24,9 +24,8 @@ musician.initStore(initialStoreData);
 app.locals.musician = musician;
 
 // start server
-const port = process.env.port || 3000;
-app.listen(port, () => {
-    console.log("Sever console log.")
+const server = app.listen(port, () => {
+  console.log("Server started on port " + port);
 });
 
 module.exports = server;
